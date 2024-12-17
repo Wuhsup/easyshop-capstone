@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="632ea03b-e9fd-4eca-b49e-7f8812fb0119" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../rest-demo/src/main/java/com/pluralsight/rest/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../rest-demo/src/main/java/com/pluralsight/rest/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../workbook-6/sort-of-people/src/main/java/com/pluralsight/sort/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../workbook-6/sort-of-people/src/main/java/com/pluralsight/sort/Program.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Wuhsup"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Wuhsup/workbook-6.git",
+    "accountId": "5592696e-cb8d-46b2-8e0a-67647ff7d188"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2qKLTdKIqgkwIPz3yUtL4jtusBr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/pluralsight/easyshop-capstone/easyshop_postman_collections"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="632ea03b-e9fd-4eca-b49e-7f8812fb0119" name="Changes" comment="" />
+      <created>1734406328546</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734406328546</updated>
+    </task>
+    <servers />
+  </component>
+</project>

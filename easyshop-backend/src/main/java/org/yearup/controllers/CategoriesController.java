@@ -37,21 +37,21 @@ public class CategoriesController
 
 
     // add the appropriate annotation for a get action
+    @GetMapping
     public List<Category> getAll() {
         return categoryDao.getAllCategories();
     }
 
-    {
-        // find and return all categories
-        return null;
-    }
-
-    // add the appropriate annotation for a get action
+    @GetMapping("/{id}")
     public Category getById(@PathVariable int id)
     {
-        // get the category by id
-        return null;
+        Category category = categoryDao.getById(id);
+        if(category == null){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+        return categoryDao.getById(id);
     }
+
 
     // the url to return all products in category 1 would look like this
     // https://localhost:8080/categories/1/products

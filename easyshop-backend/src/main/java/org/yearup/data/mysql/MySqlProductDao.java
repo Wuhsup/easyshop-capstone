@@ -19,13 +19,13 @@ public class MySqlProductDao extends MySqlDaoBase implements ProductDao
     }
 
     @Override
-    public List<Product> search(Integer categoryId, BigDecimal minPrice, BigDecimal maxPrice, String color)
-    {
+    public List<Product> search(Integer categoryId, BigDecimal minPrice, BigDecimal maxPrice, String color) {
         List<Product> products = new ArrayList<>();
 
         String sql = "SELECT * FROM products " +
                 "WHERE (category_id = ? OR ? = -1) " +
                 "   AND (price <= ? OR ? = -1) " +
+                "   AND (prize >= ? OR ? = -1  " +
                 "   AND (color = ? OR ? = '') ";
 
         categoryId = categoryId == null ? -1 : categoryId;
@@ -33,15 +33,17 @@ public class MySqlProductDao extends MySqlDaoBase implements ProductDao
         maxPrice = maxPrice == null ? new BigDecimal("-1") : maxPrice;
         color = color == null ? "" : color;
 
-        try (Connection connection = getConnection())
-        {
+        try (Connection connection = getConnection()) {
+
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setInt(1, categoryId);
             statement.setInt(2, categoryId);
             statement.setBigDecimal(3, minPrice);
             statement.setBigDecimal(4, minPrice);
-            statement.setString(5, color);
-            statement.setString(6, color);
+            statement.setBigDecimal(5, maxPrice);
+            statement.setBigDecimal(6, maxPrice);
+            statement.setString(7, color);
+            statement.setString(8, color);
 
             ResultSet row = statement.executeQuery();
 

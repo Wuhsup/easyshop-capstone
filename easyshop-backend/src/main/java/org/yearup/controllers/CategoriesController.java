@@ -59,29 +59,37 @@ public class CategoriesController
     public List<Product> getProductsById(@PathVariable int categoryId)
     {
         // get a list of product by categoryId
-        return null;
+        return productDao.listByCategoryId(categoryId);
     }
 
     // add annotation to call this method for a POST action
     // add annotation to ensure that only an ADMIN can call this function
+    @PreAuthorize("hasRole('ADMIN')")
+    @PostMapping
+    @ResponseStatus(code=HttpStatus.CREATED)
     public Category addCategory(@RequestBody Category category)
     {
         // insert the category
-        return null;
+       return categoryDao.create(category);
     }
 
     // add annotation to call this method for a PUT (update) action - the url path must include the categoryId
     // add annotation to ensure that only an ADMIN can call this function
-    public void updateCategory(@PathVariable int id, @RequestBody Category category)
-    {
+    @PreAuthorize("hasRole('ADMIN')")
+    @PutMapping("/{id}/update")
+    public void updateCategory(@PathVariable int id, @RequestBody Category category) {
         // update the category by id
+        categoryDao.update(id, category);
     }
 
 
     // add annotation to call this method for a DELETE action - the url path must include the categoryId
     // add annotation to ensure that only an ADMIN can call this function
-    public void deleteCategory(@PathVariable int id)
-    {
+    @PreAuthorize("hasRole('ADMIN')")
+    @DeleteMapping("/{id}")
+    @ResponseStatus(code= HttpStatus.NO_CONTENT)
+    public void deleteCategory(@PathVariable int id) {
         // delete the category by id
+        categoryDao.delete(id);
     }
 }

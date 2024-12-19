@@ -24,8 +24,8 @@ public class MySqlProductDao extends MySqlDaoBase implements ProductDao
 
         String sql = "SELECT * FROM products " +
                 "WHERE (category_id = ? OR ? = -1) " +
-                "   AND (price <= ? OR ? = -1) " +
-                "   AND (prize >= ? OR ? = -1  " +
+                "   AND (price >= ? OR ? = -1) " +
+                "   AND (price <= ? OR ? = -1 ) " +
                 "   AND (color = ? OR ? = '') ";
 
         categoryId = categoryId == null ? -1 : categoryId;
@@ -47,8 +47,7 @@ public class MySqlProductDao extends MySqlDaoBase implements ProductDao
 
             ResultSet row = statement.executeQuery();
 
-            while (row.next())
-            {
+            while (row.next()) {
                 Product product = mapRow(row);
                 products.add(product);
             }
@@ -69,15 +68,14 @@ public class MySqlProductDao extends MySqlDaoBase implements ProductDao
         String sql = "SELECT * FROM products " +
                     " WHERE category_id = ? ";
 
-        try (Connection connection = getConnection())
-        {
+        try (Connection connection = getConnection()){
+
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setInt(1, categoryId);
 
             ResultSet row = statement.executeQuery();
 
-            while (row.next())
-            {
+            while (row.next()){
                 Product product = mapRow(row);
                 products.add(product);
             }
@@ -102,12 +100,11 @@ public class MySqlProductDao extends MySqlDaoBase implements ProductDao
 
             ResultSet row = statement.executeQuery();
 
-            if (row.next())
-            {
+            if (row.next()) {
                 return mapRow(row);
             }
-        }
-        catch (SQLException e)
+
+        } catch (SQLException e)
         {
             throw new RuntimeException(e);
         }

@@ -81,7 +81,8 @@ public class ProductsController
     {
         try
         {
-            productDao.create(product);
+            //changed create to update the id product. this will be bug 2 for phase 2
+            productDao.update(id, product);
         }
         catch(Exception ex)
         {

@@ -17,12 +17,12 @@ As this project was completed by a backend developer, it will demonstrate how th
 
 ### Screenshots 📷
 
-#### Backend
+#### Backend (JAVA)
 
 ![image](https://github.com/user-attachments/assets/84853520-8460-4238-bd14-4b6af9b634df)
 
 
-#### Frontend
+#### Frontend (CSS)
 
 ![image](https://github.com/user-attachments/assets/4088e100-1366-4f0c-9c63-c54184379543)
 
@@ -32,7 +32,7 @@ As this project was completed by a backend developer, it will demonstrate how th
 ![image](https://github.com/user-attachments/assets/c7124c40-9fab-4dc1-820d-c23815d98ce2)
 
 
-#### SQL
+#### MySQL
 
 <img width="907" alt="image" src="https://github.com/user-attachments/assets/b868893b-ef4d-4215-b41c-8c7e6123c15f" />
 

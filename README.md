@@ -51,7 +51,7 @@ As this project was completed by a backend developer, it will demonstrate how th
 #### Update Database Duplicates
 - Remove duplicate entries from the database so the data stays accurate and not repeated.
 
-#### Frontend Multiple Items Being Displayed Fix
+#### Multiple Items Being Displayed Fix
 -Checked the webpage often to make sure it looked right and didn't show too many laptops.
 
 
